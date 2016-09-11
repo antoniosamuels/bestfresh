@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bestfresh</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <div class="sidepanel">
+        <div class="sidepanel-contain">
+          <%= link_to image_tag('bestfresh-logo.png' ), root_path %>
+
+            <p class="sidepanel-text">Local Farming, Healthy Eating</p>
+
+            <div class=sociallinks>
+                <%=link_to image_tag "social/Facebook.png" %>
+                <%=link_to image_tag "social/Twitter.png" %>
+                <%=link_to image_tag "social/Instagram.png" %>
+                <br>
+                <br>
+                <%= link_to 'New Farm', new_farm_path %>
+
+            </div>
+        </div>
+    </div>
+
+    <%= yield %>
+  </body>
+</html>

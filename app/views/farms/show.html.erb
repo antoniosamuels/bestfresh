@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <p>
+    <strong>Name:</strong>
+    <%= @farm.name %>
+  </p>
+
+  <p>
+    <strong>Address:</strong>
+    <%= @farm.address %>
+  </p>
+
+  <p>
+    <strong>Hours:</strong>
+    <%= @farm.hours %>
+  </p>
+
+  <p>
+    <strong>Genre:</strong>
+    <%= @farm.genre %>
+  </p>
+
+  <p>
+    <strong>Content:</strong>
+    <%= @farm.content %>
+  </p>
+
+  <%= image_tag @farm.image.url(:medium) %>
+  <br>
+
+  <%= link_to 'Edit', edit_farm_path(@farm) %> |
+  <%= link_to 'Back', farms_path %>
+</div>

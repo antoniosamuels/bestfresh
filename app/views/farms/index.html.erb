@@ -1,0 +1,68 @@
+<div class="container">
+
+  <p id="notice"><%= notice %></p>
+
+    <% @farms.each_slice(3) do |farms| %>
+    <div class="Grid Grid--gutters Grid--full large-Grid--fit u-textCenter">
+      <% @farms.each do |farm| %>
+        <div class="Grid-cell">
+            <div class="cards">
+              <%= link_to farm do %>
+              <% end %>
+              <p>
+                <%= link_to farm.name, farm, :class=> "title" %>
+              </p>
+              <p>
+                <%= link_to farm.address, farm, :class => "address" %>
+              </p>
+              <p>
+                <%= farm.hours %>
+              </p>
+              <p>
+                <%= truncate(farm.content, :length => 120) %>
+              </p>
+              <p>
+                <%= farm.genre %>
+              </p>
+              <%= link_to "View More", farm, class: 'btn' %>
+              <br>
+              <br>
+
+            </div>
+        </div>
+        <% end %>
+    </div>
+    <% end %>
+</div>
+
+
+
+<!-- <h1>Farms</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Genre</th>
+            <th>Content</th>
+            <th colspan="3"></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @farms.each do |farm| %>
+        <tr>
+            <td><%= farm.name %></td>
+            <td><%= farm.address %></td>
+            <td><%= farm.genre %></td>
+            <td><%= farm.content %></td>
+            <td><%= link_to 'Show', farm %></td>
+            <td><%= link_to 'Edit', edit_farm_path(farm) %></td>
+            <td><%= link_to 'Destroy', farm, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<br> -->
