@@ -129,7 +129,8 @@ li {
     min-width: auto;
     max-width: 750px;
     display: block;
-    background-color: #fff;
+    background-color: #F2F2F2;
+    /*background-color: #fff;*/
     padding: 25px;
     height: 100vh;
 }
