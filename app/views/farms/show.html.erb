@@ -10,6 +10,10 @@
   </p>
 
   <p>
+    <%= @farm.city %>
+  </p>
+
+  <p>
     <%= @farm.hours.downcase.gsub(/(\A|\s)\w/){ |letter| letter.upcase } %>
   </p>
 
