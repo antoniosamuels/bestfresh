@@ -1,78 +1,76 @@
 <%= form_for @farm, html: { multipart: true } do |f| %>
-  <% if farm.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(farm.errors.count, "error") %> prohibited this farm from being saved:</h2>
+<% if farm.errors.any? %>
+<div id="error_explanation">
+    <h2><%= pluralize(farm.errors.count, "error") %>
+        prohibited this farm from being saved:</h2>
 
-      <ul>
-      <% farm.errors.full_messages.each do |message| %>
+    <ul>
+        <% farm.errors.full_messages.each do |message| %>
         <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+        <% end %>
+    </ul>
+</div>
+<% end %>
 
-  <div class="field">
+<div class="field">
     <%= f.label :name %>
     <%= f.text_field :name, class: "formtext" %>
-  </div>
+</div>
 
-  <div class="field">
+<div class="field">
     <%= f.label :address %>
     <%= f.text_field :address, class: "formtext" %>
-  </div>
+</div>
 
-  <div class="field">
+<div class="field">
     <%= f.label :hours %>
     <%= f.text_field :hours, class: "formtext" %>
-  </div>
+</div>
 
-  <div class="field">
+<div class="field">
+    <%= f.label :Items%>
     <div class="groupcheckbox">
-    <%= label_tag 'genre_fruit', 'Fruit' %>
-    <%= check_box_tag 'farm[genre][]', 'Fruit', checked('Fruit'), id: 'genre_fruit' %>
+        <%= label_tag 'genre_fruit', 'Fruit' %>
+        <%= check_box_tag 'farm[genre][]', 'Fruit', checked('Fruit'), id: 'genre_fruit' %>
     </div>
 
     <div class="groupcheckbox">
-    <%= label_tag 'genre_milk', 'Milk' %>
-    <%= check_box_tag 'farm[genre][]', 'Milk', checked('Milk'), id: 'genre_milk' %>
+        <%= label_tag 'genre_milk', 'Milk' %>
+        <%= check_box_tag 'farm[genre][]', 'Milk', checked('Milk'), id: 'genre_milk' %>
     </div>
 
     <div class="groupcheckbox">
-    <%= label_tag 'genre_meat', 'Meat' %>
-    <%= check_box_tag 'farm[genre][]', 'Meat', checked('Meat'), id: 'genre_meat' %>
+        <%= label_tag 'genre_meat', 'Meat' %>
+        <%= check_box_tag 'farm[genre][]', 'Meat', checked('Meat'), id: 'genre_meat' %>
     </div>
 
     <div class="groupcheckbox">
-    <%= label_tag 'genre_honey', 'Honey' %>
-    <%= check_box_tag 'farm[genre][]', 'Honey', checked('Honey'), id: 'genre_honey' %>
+        <%= label_tag 'genre_honey', 'Honey' %>
+        <%= check_box_tag 'farm[genre][]', 'Honey', checked('Honey'), id: 'genre_honey' %>
     </div>
 
     <div class="groupcheckbox">
-    <%= label_tag 'genre_veggies', 'Veggies' %>
-    <%= check_box_tag 'farm[genre][]', 'Veggies', checked('Veggies'), id: 'genre_veggies' %>
+        <%= label_tag 'genre_veggies', 'Veggies' %>
+        <%= check_box_tag 'farm[genre][]', 'Veggies', checked('Veggies'), id: 'genre_veggies' %>
     </div>
 
     <div class="groupcheckbox">
-    <%= label_tag 'genre_eggs', 'Eggs' %>
-    <%= check_box_tag 'farm[genre][]', 'Eggs', checked('Eggs'), id: 'genre_eggs' %>
+        <%= label_tag 'genre_eggs', 'Eggs' %>
+        <%= check_box_tag 'farm[genre][]', 'Eggs', checked('Eggs'), id: 'genre_eggs' %>
     </div>
 
-    <div class="groupcheckbox">
-    <%= label_tag 'genre_seafood', 'Seafood' %>
-    <%= check_box_tag 'farm[genre][]', 'Seafood', checked('Seafood'), id: 'genre_seafood' %>
-    </div>
-  </div>
+</div>
 
-  <div class="field">
+<div class="field">
     <%= f.label :content %>
     <%= f.text_area :content %>
-  </div>
+</div>
 
-  <div class="field">
+<div class="field">
     <%= f.file_field :image %>
-  </div>
+</div>
 
-  <div class="actions">
+<div class="actions">
     <%= f.submit %>
-  </div>
+</div>
 <% end %>

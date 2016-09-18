@@ -31,7 +31,7 @@ p {
 }
 
 .formtext {
-  width: 500px;
+  width: 510px;
   height: 40px;
   border-radius: 4px;
   border-style: hidden;
@@ -39,7 +39,7 @@ p {
 }
 
 textarea {
-  width: 500px;
+  width: 510px;
   height: 175px;
   border-radius: 4px;
   border-style: hidden;
@@ -48,6 +48,10 @@ textarea {
 
 .groupcheckbox {
   display: inline-block;
+  padding: 10px;
+  text-align: center;
+  border-radius: 3px;
+  background-color: #999;
 }
 
 .address {
@@ -272,22 +276,24 @@ li {
   min-height: 276px;
   max-height: 276px;
   /* Rectangle 3: */
-  background: #FAFAFA;
+  background: url();
   box-shadow: 0px 2px 4px 0px rgba(164,164,164,0.50);
   border-radius: 9px;
 }
 
 .cards-last {
-  padding: 25px;
+  padding: 20%;
   margin: 10px;
   min-width: 400px;
   max-width: 100%;
   min-height: 276px;
   max-height: 276px;
   /* Rectangle 3: */
-  background: #000;
+  background: url('/assets/last-img.jpg') no-repeat center center;
   box-shadow: 0px 2px 4px 0px rgba(164,164,164,0.50);
   border-radius: 9px;
+  color: #fff;
+  vertical-align: middle;
 }
 
 /* grid -- flex-box */
