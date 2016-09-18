@@ -30,12 +30,24 @@ p {
   font-size: 1.0em;
 }
 
-input {
+.formtext {
   width: 500px;
   height: 40px;
   border-radius: 4px;
   border-style: hidden;
   padding: 10px;
+}
+
+textarea {
+  width: 500px;
+  height: 175px;
+  border-radius: 4px;
+  border-style: hidden;
+  padding: 10px;
+}
+
+.groupcheckbox {
+  display: inline-block;
 }
 
 .address {
@@ -355,22 +367,4 @@ box-sizing: border-box;
 .img-size {
   width: 100%;
   border-radius: 10px;
-}
-
-
-/*input {
-  width: 300px;
-  height: 35px;
-  border-radius: 6px;
-  font-size: 14px;
-  padding: 10px;
-}*/
-
-textarea {
-  width: 300px;
-  height: 125px;
-  border-radius: 6px;
-  border: none;
-  font-size: 14px;
-  padding: 10px;
 }

@@ -13,40 +13,54 @@
 
   <div class="field">
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: "formtext" %>
   </div>
 
   <div class="field">
     <%= f.label :address %>
-    <%= f.text_field :address %>
+    <%= f.text_field :address, class: "formtext" %>
   </div>
 
   <div class="field">
     <%= f.label :hours %>
-    <%= f.text_field :hours %>
+    <%= f.text_field :hours, class: "formtext" %>
   </div>
 
   <div class="field">
+    <div class="groupcheckbox">
     <%= label_tag 'genre_fruit', 'Fruit' %>
     <%= check_box_tag 'farm[genre][]', 'Fruit', checked('Fruit'), id: 'genre_fruit' %>
+    </div>
 
+    <div class="groupcheckbox">
     <%= label_tag 'genre_milk', 'Milk' %>
     <%= check_box_tag 'farm[genre][]', 'Milk', checked('Milk'), id: 'genre_milk' %>
+    </div>
 
+    <div class="groupcheckbox">
     <%= label_tag 'genre_meat', 'Meat' %>
     <%= check_box_tag 'farm[genre][]', 'Meat', checked('Meat'), id: 'genre_meat' %>
+    </div>
 
+    <div class="groupcheckbox">
     <%= label_tag 'genre_honey', 'Honey' %>
     <%= check_box_tag 'farm[genre][]', 'Honey', checked('Honey'), id: 'genre_honey' %>
+    </div>
 
+    <div class="groupcheckbox">
     <%= label_tag 'genre_veggies', 'Veggies' %>
     <%= check_box_tag 'farm[genre][]', 'Veggies', checked('Veggies'), id: 'genre_veggies' %>
+    </div>
 
+    <div class="groupcheckbox">
     <%= label_tag 'genre_eggs', 'Eggs' %>
     <%= check_box_tag 'farm[genre][]', 'Eggs', checked('Eggs'), id: 'genre_eggs' %>
+    </div>
 
+    <div class="groupcheckbox">
     <%= label_tag 'genre_seafood', 'Seafood' %>
     <%= check_box_tag 'farm[genre][]', 'Seafood', checked('Seafood'), id: 'genre_seafood' %>
+    </div>
   </div>
 
   <div class="field">
