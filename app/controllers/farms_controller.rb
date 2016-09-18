@@ -1,64 +1,47 @@
 class FarmsController < ApplicationController
   before_action :set_farm, only: [:show, :edit, :update, :destroy]
 
-  # GET /farms
-  # GET /farms.json
   def index
     @farms = Farm.all
   end
 
-  # GET /farms/1
-  # GET /farms/1.json
   def show
+    @farm = Farm.find(params[:id])
   end
 
-  # GET /farms/new
   def new
     @farm = Farm.new
   end
 
-  # GET /farms/1/edit
   def edit
+    @farm = Farm.find(params[:id])
   end
 
-  # POST /farms
-  # POST /farms.json
   def create
     @farm = Farm.new(farm_params)
 
-    respond_to do |format|
       if @farm.save
-        format.html { redirect_to @farm, notice: 'Farm was successfully created.' }
-        format.json { render :show, status: :created, location: @farm }
+        redirect_to @farm
       else
-        format.html { render :new }
-        format.json { render json: @farm.errors, status: :unprocessable_entity }
+        render "new"
       end
-    end
   end
 
-  # PATCH/PUT /farms/1
-  # PATCH/PUT /farms/1.json
   def update
-    respond_to do |format|
+    @farm = Farm.find(params[:id])
+
       if @farm.update(farm_params)
-        format.html { redirect_to @farm, notice: 'Farm was successfully updated.' }
-        format.json { render :show, status: :ok, location: @farm }
+        redirect_to @farm
       else
-        format.html { render :edit }
-        format.json { render json: @farm.errors, status: :unprocessable_entity }
-      end
+        render 'edit'
     end
   end
 
-  # DELETE /farms/1
-  # DELETE /farms/1.json
   def destroy
+    @farm = Farm.find(params[:id])
     @farm.destroy
-    respond_to do |format|
-      format.html { redirect_to farms_url, notice: 'Farm was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+
+    redirect_to farms_path
   end
 
   private

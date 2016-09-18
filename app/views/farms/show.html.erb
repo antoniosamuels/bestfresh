@@ -1,27 +1,24 @@
 <p id="notice"><%= notice %></p>
 <div class="container-store">
+  <%= link_to 'Back', farms_path %>
+  <h2>
+    <%= @farm.name.downcase.gsub(/(\A|\s)\w/){ |letter| letter.upcase } %>
+  </h2>
+
   <p>
-    <strong>Name:</strong>
-    <%= @farm.name %>
+    <%= @farm.address.downcase.gsub(/(\A|\s)\w/){ |letter| letter.upcase } %>
   </p>
 
   <p>
-    <strong>Address:</strong>
-    <%= @farm.address %>
+    <%= @farm.hours.downcase.gsub(/(\A|\s)\w/){ |letter| letter.upcase } %>
   </p>
 
   <p>
-    <strong>Hours:</strong>
-    <%= @farm.hours %>
-  </p>
-
-  <p>
-    <strong>Genre:</strong>
     <%= @farm.genre %>
   </p>
 
+  <h2>Our Story</h2>
   <p>
-    <strong>Content:</strong>
     <%= @farm.content %>
   </p>
 
@@ -29,5 +26,7 @@
   <br>
 
   <%= link_to 'Edit', edit_farm_path(@farm) %> |
-  <%= link_to 'Back', farms_path %>
+  <%= link_to 'Back', farms_path %> |
+  <%= link_to 'Delete', farm_path(@farm), method: :delete, data: { confirm: 'Are you sure?'} %>
+
 </div>
