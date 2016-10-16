@@ -5,10 +5,12 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <div class="topbar">dafdfa</div>
 
     <div class="sidepanel">
         <div class="sidepanel-contain">
@@ -22,7 +24,7 @@
                 <%=link_to image_tag "social/Instagram.png" %>
                 <br>
                 <br>
-                <%= link_to 'New Farm', new_farm_path %>
+                <%= link_to 'New Farm', new_farm_path, class: 'btn' %>
 
             </div>
         </div>

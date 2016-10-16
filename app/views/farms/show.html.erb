@@ -7,13 +7,9 @@
 
   <p>
     <%= @farm.address.downcase.gsub(/(\A|\s)\w/){ |letter| letter.upcase } %>
-  </p>
-
-  <p>
+<br>
     <%= @farm.city %>
-  </p>
-
-  <p>
+<br>
     <%= @farm.hours.downcase.gsub(/(\A|\s)\w/){ |letter| letter.upcase } %>
   </p>
 
@@ -32,5 +28,7 @@
   <%= link_to 'Edit', edit_farm_path(@farm) %> |
   <%= link_to 'Back', farms_path %> |
   <%= link_to 'Delete', farm_path(@farm), method: :delete, data: { confirm: 'Are you sure?'} %>
-
+  <br>
+  <br>
+  <br>
 </div>

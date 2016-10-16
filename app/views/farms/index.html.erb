@@ -15,17 +15,16 @@
                 </p>
                 <p>
                     <%= link_to farm.address.downcase.gsub(/(\A|\s)\w/){ |letter| letter.upcase }, farm, :class => "address" %>
-                </p>
-                <p>
-                    <%= farm.city %>
+                <br>
+                    <%= link_to farm.city.downcase.gsub(/(\A|\s)\w/){ |letter| letter.upcase }, farm, :class => "address" %>
                 </p>
                 <p>
                     <%= farm.hours.downcase.gsub(/(\A|\s)\w/){ |letter| letter.upcase } %>
                 </p>
                 <p>
-                    <%= truncate(farm.content, :length => 90) %>
+                    <%= truncate(farm.content, :length => 70) %>
                 </p>
-                <p>
+                <p class="greenlink">
                     <%= farm.genre %>
                 </p>
                 <%= link_to "View More", farm, class: 'btn' %>
@@ -41,12 +40,12 @@
 
         <%# end %>
 
-        <div class="Grid Grid--gutters Grid--full large-Grid--fit u-textCenter">
+        <div class="Grid-cell">
             <div class="Grid-cell-last">
                 <div class="cards-last">
                     <h1>Love to have you!</h1>
                     <p>Are you a local, organic farm that supplies the communtity? You should be on this list.</p>
-                    <p><%= link_to "View More", class: 'btn' %></p>
+                    <p class="button-con"><%= link_to "View More" %></p>
                 </div>
             </div>
         </div>

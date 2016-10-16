@@ -26,8 +26,31 @@
   color: #515151;
 }
 
+.topbar {
+  background-color: #2F2628;
+  width: 100%;
+  height: 60px;
+}
+
 p {
   font-size: 1.0em;
+}
+
+.greenlink  {
+  color: #647A57;
+}
+
+.button-con {
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 15px;
+  display: inline-grid;
+  width: 110px;
+  margin: 0 auto;
+}
+
+.button-con a {
+  text-decoration: none;
 }
 
 .formtext {
@@ -152,8 +175,8 @@ li {
     margin-left: 315px;
     margin-top: 0px;
     min-width: auto;
-    max-width: 750px;
-    display: block;
+    max-width: 875px;
+    display: inline-block;
     background-color: #F2F2F2;
     /*background-color: #fff;*/
     padding: 25px;
@@ -269,22 +292,22 @@ li {
 }
 
 .cards {
-  padding: 10px;
+  padding: 15px 20px;
   margin: 10px;
-  min-width: 400px;
+  min-width: 320px;
   max-width: 100%;
   min-height: 276px;
   max-height: 276px;
   /* Rectangle 3: */
-  background: url();
+  background: #FCFCFC;
   box-shadow: 0px 2px 4px 0px rgba(164,164,164,0.50);
   border-radius: 9px;
 }
 
 .cards-last {
-  padding: 20%;
+  padding: 18% 30px;
   margin: 10px;
-  min-width: 400px;
+  min-width: 320px;
   max-width: 100%;
   min-height: 276px;
   max-height: 276px;
