@@ -1,9 +1,11 @@
-<p id="notice"><%= notice %></p>
+
 <div class="container-store">
-  <%= link_to 'Back', farms_path %>
-  <h2>
+  <%= link_to 'Return to Farm List', farms_path, class: 'btn' %>
+  <br>
+  <br>
+  <h1>
     <%= @farm.name.downcase.gsub(/(\A|\s)\w/){ |letter| letter.upcase } %>
-  </h2>
+  </h1>
 
   <p>
     <%= @farm.address.downcase.gsub(/(\A|\s)\w/){ |letter| letter.upcase } %>
@@ -25,9 +27,14 @@
   <%= image_tag @farm.image.url(:medium), class: "img-size" %>
   <br>
 
-  <%= link_to 'Edit', edit_farm_path(@farm) %> |
-  <%= link_to 'Back', farms_path %> |
-  <%= link_to 'Delete', farm_path(@farm), method: :delete, data: { confirm: 'Are you sure?'} %>
+  <% if user_signed_in? %>
+  <br>
+    <%= link_to 'Edit', edit_farm_path(@farm), class: 'btn' %> | <%= link_to 'Delete', farm_path(@farm), method: :delete, data: { confirm: 'Are you sure?'}, class: 'btn' %>
+  <% end %>
+  <br>
+  <br>
+  <%= link_to 'Return to Farm List', farms_path, class: 'btn' %>
+
   <br>
   <br>
   <br>

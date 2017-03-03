@@ -10,9 +10,17 @@
   </head>
 
   <body>
+
     <div class="topbar">
-      <div class="skit">“If you can’t pronounce it, don’t eat it”</div>
-      <div class="emailsignup">Recieve email update</div>
+      <!-- <div class="skit">“If you can’t pronounce it, don’t eat it”</div> -->
+      <!-- <div class="emailsignup">Recieve email update</div> -->
+      <% if user_signed_in? %>
+        <%= link_to current_user.email, edit_user_registration_path %>
+        <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to "Sign Up", new_user_registration_path %>
+        <%= link_to "Login", new_user_session_path %>
+      <% end %>
     </div>
 
     <div class="sidepanel">
@@ -27,10 +35,37 @@
                 <%=link_to image_tag "social/Instagram.png" %>
                 <br>
                 <br>
-                <%= link_to 'New Farm', new_farm_path, class: 'btn' %>
+                <% if user_signed_in? %>
+                  <%= link_to 'New Farm', new_farm_path, class: 'btn' %>
+                <% end %>
 
             </div>
         </div>
+    </div>
+
+    <div class="sidepanel-top">
+        <!-- <div class="sidepanel-contain"> -->
+          <%= link_to image_tag('best-fresh-logo-sm.png' ), root_path %>
+
+            <p class="sidepanel-text-sm">Local Farming, Healthy Eating</p>
+
+            <div class=sociallinks>
+                <%=link_to image_tag "social/Facebook.png" %>
+                <%=link_to image_tag "social/Twitter.png" %>
+                <%=link_to image_tag "social/Instagram.png" %>
+                <br>
+                <br>
+                <% if user_signed_in? %>
+                  <%= link_to 'New Farm', new_farm_path, class: 'btn' %>
+                <% end %>
+
+            </div>
+        <!-- </div> -->
+    </div>
+
+    <div class="container">
+      <%if notice %><div class="notice notice-info"><%= notice %></div><% end %>
+      <%if alert %><div class="alert alert-info"><%= alert %></div><% end %>
     </div>
 
     <%= yield %>
