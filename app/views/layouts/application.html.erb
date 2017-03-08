@@ -14,13 +14,13 @@
     <div class="topbar">
       <!-- <div class="skit">“If you can’t pronounce it, don’t eat it”</div> -->
       <!-- <div class="emailsignup">Recieve email update</div> -->
-      <% if user_signed_in? %>
+      <!-- <% if user_signed_in? %>
         <%= link_to current_user.email, edit_user_registration_path %>
         <%= link_to "Logout", destroy_user_session_path, method: :delete %>
       <% else %>
         <%= link_to "Sign Up", new_user_registration_path %>
         <%= link_to "Login", new_user_session_path %>
-      <% end %>
+      <% end %> -->
     </div>
 
     <div class="sidepanel">

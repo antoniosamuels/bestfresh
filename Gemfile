@@ -16,6 +16,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem "paperclip", "~> 5.0.0"
 gem 'devise'
+gem 'activeadmin', github: 'activeadmin'
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
 
 group :development, :test do
