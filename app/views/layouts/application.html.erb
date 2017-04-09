@@ -13,7 +13,9 @@
 
     <div class="topbar">
       <!-- <div class="skit">“If you can’t pronounce it, don’t eat it”</div> -->
-      <!-- <div class="emailsignup">Recieve email update</div> -->
+      <div class="emailsignup">
+        <%= link_to 'Get on the list', new_contact_path, class: 'btn' %>
+      </div>
       <!-- <% if user_signed_in? %>
         <%= link_to current_user.email, edit_user_registration_path %>
         <%= link_to "Logout", destroy_user_session_path, method: :delete %>
@@ -37,6 +39,9 @@
                 <br>
                 <% if user_signed_in? %>
                   <%= link_to 'New Farm', new_farm_path, class: 'btn' %>
+                  <br>
+                  <br>
+                  <%= link_to 'Sign-out', destroy_user_session_path, method: :delete %>
                 <% end %>
 
             </div>
