@@ -61,20 +61,6 @@ p {
   color: #926A70;
 }
 
-.button-con {
-  background-color: #4681A0;
-  padding: 5px;
-  border-radius: 15px;
-  display: inline-grid;
-  width: 110px;
-  margin: 0 auto;
-}
-
-.button-con a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
 .formtext {
   width: 510px;
   height: 40px;
@@ -130,9 +116,9 @@ textarea {
 
 .btn {
   background: #926A70;
-  -webkit-border-radius: 50;
-  -moz-border-radius: 50;
-  border-radius: 50px;
+  -webkit-border-radius: 3;
+  -moz-border-radius: 3;
+  border-radius: 3px;
   font-family: Arial;
   color: #ffffff;
   font-size: 14px;
@@ -143,6 +129,26 @@ textarea {
 .btn:hover {
   background: #2F2628;
   text-decoration: none;
+}
+
+.button-con {
+  background-color: #4681A0;
+  padding: 5px;
+  border-radius: 3px;
+  display: inline-grid;
+  width: 130px;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+.button:hover {
+  background: #2F2628;
+  text-decoration: none;
+}
+
+.button-con a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 h1 {
