@@ -2,27 +2,29 @@
   <h1>Say Hello</h1>
   <br>
   <%= form_for @contact do |f| %>
-    <%= f.label :name %><br>
+    <%= f.label :name %>
     <%= f.text_field :name, required: true %>
 
-    <br>
+    <br><br>
 
-    <%= f.label :email %><br>
+    <%= f.label :email %>
     <%= f.text_field :email, required: true %>
 
-    <br>
+    <br><br>
 
     <%= f.file_field :image %>
 
-    <br>
+    <br><br>
 
-    <%= f.label :message %><br>
+    <%= f.label :message %>
     <%= f.text_area :message, as: :text %>
 
     <div class="hidden">
-      <%= f.label :nickname %><br>
+      <%= f.label :nickname %>
       <%= f.text_field :nickname, hint: 'leave this field blank' %>
     </div>
+
+    <br>
 
     <%= f.submit 'Send Message', class: "btn" %>
   <% end %>
