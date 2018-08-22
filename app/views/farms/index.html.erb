@@ -10,15 +10,14 @@
                 <%#card2 %>
 
                 <p>
-                    <%= link_to farm.name.downcase.gsub(/(\A|\s)\w/){ |letter| letter.upcase }, farm, :class=> "title" %>
-                </p>
-                <p>
-                    <%= link_to farm.address.downcase.gsub(/(\A|\s)\w/){ |letter| letter.upcase }, farm, :class => "address" %>
-                <br>
+                    <%= link_to farm.address.downcase.gsub(/(\A|\s)\w/){ |letter| letter.upcase }, farm, :class => "address" %><br>
                     <%= link_to farm.city.downcase.gsub(/(\A|\s)\w/){ |letter| letter.upcase }, farm, :class => "address" %>
                 </p>
                 <p>
-                    <%= farm.hours.downcase.gsub(/(\A|\s)\w/){ |letter| letter.upcase } %>
+                    <%= link_to farm.name.downcase.gsub(/(\A|\s)\w/){ |letter| letter.upcase }, farm, :class=> "title" %>
+                </p>
+                <p>
+                    <%# farm.hours.downcase.gsub(/(\A|\s)\w/){ |letter| letter.upcase } %>
                 </p>
                 <p>
                     <%= truncate(farm.content, :length => 70) %>

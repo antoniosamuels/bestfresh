@@ -13,9 +13,9 @@ gem 'turbolinks', '~> 5'
 
 gem 'jbuilder', '~> 2.5'
 
-gem "paperclip", "~> 5.0.0"
-gem 'nokogiri' ~> 1.8.1
-gem 'devise'
+gem 'paperclip', '~> 6.0.0'
+gem 'nokogiri', '~> 1.8.3'
+gem 'devise', '~> 4.4.3'
 gem 'activeadmin', github: 'activeadmin'
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
 
@@ -38,7 +38,7 @@ group :development do
 end
 
 group :production do
-  gem 'pg'
+  #gem 'pg'
   gem 'rails_12factor'
 end
 

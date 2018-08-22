@@ -22,12 +22,12 @@
  body {
   margin: 0px;
   background-color: #F2F2F2;
-  font-family: arial;
+  font-family: 'Cabin', sans-serif;
   color: #515151;
 }
 
 .topbar {
-    background-color: #2F2628;
+    background-color: #6AAA1F;
     width: 100%;
     height: 40px;
     padding-left: 75px;
@@ -58,7 +58,7 @@ p {
 }
 
 .burglink  {
-  color: #926A70;
+  color: #2e2e2e;
 }
 
 .formtext {
@@ -102,23 +102,30 @@ textarea {
 }
 
 .address {
-  font-size: .9em;
+  font-size: 0.8rem;
   text-decoration: none;
-  color: #926A70;
+  color: #2B4D03;
+  line-height: auto;
+  font-weight: 500;
+}
+
+.hours {
+  font-size: 1.2em;
+  text-transform: uppercase;
 }
 
 .title {
   font-size: 22px;
   text-decoration: none;
   /*text-transform: uppercase;*/
-  color: #4A4A4A;
+  color: #559709;
 }
 
 .btn {
-  background: #926A70;
-  -webkit-border-radius: 3;
-  -moz-border-radius: 3;
-  border-radius: 3px;
+  background: rgb(85, 151, 9);
+  -webkit-border-radius: 50;
+  -moz-border-radius: 50;
+  border-radius: 50px;
   font-family: Arial;
   color: #ffffff;
   font-size: 14px;
@@ -127,14 +134,14 @@ textarea {
 }
 
 .btn:hover {
-  background: #2F2628;
+  background: #6AAA1F;
   text-decoration: none;
 }
 
 .button-con {
   background-color: #4681A0;
   padding: 5px;
-  border-radius: 3px;
+  border-radius: 50px;
   display: inline-grid;
   width: 130px;
   margin: 0 auto;
@@ -221,7 +228,7 @@ li {
     margin-left: 315px;
     margin-top: 0px;
     min-width: auto;
-    max-width: 875px;
+    max-width: 675px;
     display: inline-block;
     background-color: #F2F2F2;
     /* background-color: #fff; */
@@ -358,7 +365,7 @@ li {
   margin: 8px;
   min-width: 305px;
   max-width: 100%;
-  min-height: 270px;
+  min-height: 256px;
   max-height: 276px;
   /* Rectangle 3: */
   background: url('/assets/last-img.jpg') no-repeat center center;
